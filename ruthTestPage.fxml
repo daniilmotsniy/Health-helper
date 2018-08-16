@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.RuthTestController">
+    <children>
+        <AnchorPane prefHeight="204.0" prefWidth="314.0">
+            <children>
+              <AnchorPane prefHeight="70.0" prefWidth="460.0" style="-fx-background-color: #6994db;">
+                  <children>
+                      <Text fill="WHITE" layoutX="168.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Проба Руф'є" wrappingWidth="136.13671875">
+                          <font>
+                              <Font name="Gigi" size="23.0" />
+                          </font>
+                      </Text>
+                      <Text fill="WHITE" layoutX="157.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тест для школярів" wrappingWidth="157.296875">
+                          <font>
+                              <Font name="Gigi" size="18.0" />
+                          </font>
+                      </Text>
+                  <Button fx:id="btnBackRuthTest" layoutX="40.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5583D3;" text="Назад" textFill="WHITE" />
+                  </children>
+              </AnchorPane>
+              <Text layoutX="11.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок 1. Заміряйте пульс за допомогою секундоміра нижче, протягом 15 секунд в стані спокою після 5-хвилинного відпочинку. Занесіть отриманий результат в поле Р1." wrappingWidth="277.13671875">
+                  <font>
+                      <Font size="13.0" />
+                  </font>
+              </Text>
+              <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вкажіть вік від 7 до 18 (повних років)" wrappingWidth="271.13671875">
+                  <font>
+                      <Font size="13.0" />
+                  </font>
+              </Text>
+      
+              <Text layoutX="11.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок 2. Зробіть 30 присідань за 45 секунд. Знову заміряйте пульс за 15 секунд. Занесіть отриманий результат в поле Р2." wrappingWidth="277.13671875">
+                  <font>
+                      <Font size="13.0" />
+                  </font>
+              </Text>
+            </children>
+        </AnchorPane>
+
+        <TextArea fx:id="labelInput0" layoutX="301.0" layoutY="86.0" prefHeight="25.0" prefWidth="136.0" promptText="Вік" />
+        <TextArea fx:id="labelInput1" layoutX="301.0" layoutY="159.0" prefHeight="23.0" prefWidth="136.0" promptText="P1" />
+        <TextArea fx:id="labelInput2" layoutX="301.0" layoutY="227.0" prefHeight="23.0" prefWidth="136.0" promptText="P2" />
+        <TextArea fx:id="labelInput3" layoutX="301.0" layoutY="296.0" prefHeight="23.0" prefWidth="136.0" promptText="P3" />
+        <Text layoutX="19.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок 3. Хвилину відпочивайте." />
+        <Text layoutX="14.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок 4. Знову заміряємо пульс 15 секунд. Занесіть отриманий результат в поле Р3." wrappingWidth="277.13671875" />
+        <Text layoutX="14.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Крок 5. Натисніть кнопку розрахунку!" />
+
+        <Text fx:id="labelResultString" layoutX="32.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результат : ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelResult" layoutX="117.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelEstimateString" layoutX="200.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оцінка : ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelEstimate" layoutX="265.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.296875">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnCheck" layoutX="329.0" layoutY="360.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #5583D3;" text="Рахувати" textFill="WHITE" />
+          <Label fx:id="time_sec" focusTraversable="false" layoutX="43.0" layoutY="356.0" prefHeight="58.0" prefWidth="35.0" text="0">
+              <font>
+                  <Font name="Roboto Regular" size="24.0" />
+              </font>
+          </Label>
+          <Button fx:id="time_go" cache="true" focusTraversable="false" layoutX="78.0" layoutY="369.0" mnemonicParsing="false" onAction="#time_go" prefHeight="34.0" prefWidth="79.0" text="Старт/Стоп">
+              <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+              </font>
+      </Button>
+          <Button fx:id="time_clear" focusTraversable="false" layoutX="164.0" layoutY="370.0" mnemonicParsing="false" onAction="#time_clear" prefHeight="32.0" prefWidth="79.0" text="Очистити" />
+
+    </children>
+</AnchorPane>
