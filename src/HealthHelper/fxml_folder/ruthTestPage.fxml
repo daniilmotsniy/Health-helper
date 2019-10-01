@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.RuthTestController">
+    <children>
+      <AnchorPane prefHeight="77.0" prefWidth="470.0" style="-fx-background-color: #6994db;">
+         <children>
+            <Text fill="WHITE" layoutX="142.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%ruth_test_main" wrappingWidth="179.296875">
+               <font>
+                  <Font name="Roboto Regular" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnBackRuthTest" layoutX="33.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5583D3;" text="%back" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+
+        <TextArea fx:id="labelInput0" layoutX="301.0" layoutY="143.0" prefHeight="25.0" prefWidth="136.0" promptText="%rt_age" />
+        <TextArea fx:id="labelInput1" layoutX="301.0" layoutY="185.0" prefHeight="23.0" prefWidth="136.0" promptText="P1" />
+        <TextArea fx:id="labelInput2" layoutX="301.0" layoutY="227.0" prefHeight="23.0" prefWidth="136.0" promptText="P2" />
+        <TextArea fx:id="labelInput3" layoutX="301.0" layoutY="268.0" prefHeight="23.0" prefWidth="136.0" promptText="P3" />
+
+        <Text fx:id="labelResultString" layoutX="32.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%result">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelResult" layoutX="117.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelEstimateString" layoutX="153.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%rt_estimate">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="labelEstimate_no" layoutX="251.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%no" visible="false" wrappingWidth="157.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnCheck" layoutX="332.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #5583D3;" text="%calc" textFill="WHITE" />
+          <Label fx:id="time_sec" focusTraversable="false" layoutX="43.0" layoutY="356.0" prefHeight="58.0" prefWidth="35.0" text="0">
+              <font>
+                  <Font name="Roboto Regular" size="24.0" />
+              </font>
+          </Label>
+          <Button fx:id="time_go" cache="true" focusTraversable="false" layoutX="78.0" layoutY="369.0" mnemonicParsing="false" onAction="#time_go" prefHeight="34.0" prefWidth="79.0" text="%rt_start_stop">
+              <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+              </font>
+      </Button>
+          <Button fx:id="time_clear" focusTraversable="false" layoutX="164.0" layoutY="370.0" mnemonicParsing="false" onAction="#time_clear" prefHeight="32.0" prefWidth="79.0" text="%rt_clear" />
+      <Text layoutX="20.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%rt_text" wrappingWidth="266.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="labelEstimate_bad" layoutX="251.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%bad" visible="false" wrappingWidth="157.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="labelEstimate_good" layoutX="251.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%good" visible="false" wrappingWidth="157.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="labelEstimate_yes" layoutX="251.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%yes" visible="false" wrappingWidth="157.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="labelEstimate_perfect" layoutX="251.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%perfect" visible="false" wrappingWidth="179.296875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="doctors_rt" layoutX="284.0" layoutY="374.0" prefHeight="25.0" prefWidth="157.0" promptText="%selectEmail" />
+      <Button fx:id="btnSend_rt" layoutX="279.0" layoutY="440.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="157.0" style="-fx-background-color: #6994db;" text="%send" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <TextField fx:id="id_rt" layoutX="300.0" layoutY="106.0" prefHeight="25.0" prefWidth="136.0" promptText="ID" />
+      <Text fx:id="empty_rt" layoutX="327.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%empty" visible="false" wrappingWidth="114.0" />
+
+
+    </children>
+</AnchorPane>

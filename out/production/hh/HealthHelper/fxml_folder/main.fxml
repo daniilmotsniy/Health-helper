@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.MainController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="460.0" style="-fx-background-color: #6994db;">
+         <children>
+            <Text fill="WHITE" layoutX="157.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Health Helper">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="ruthTest_button" layoutX="107.0" layoutY="288.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="244.0" style="-fx-background-color: #6994db;" text="%ruth_test_main" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="bwiTest_button" layoutX="107.0" layoutY="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #6994db;" text="%bwi_main" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="dm_button" layoutX="108.0" layoutY="192.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #6994db;" text="%dm_main" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="doctor_btn" layoutX="107.0" layoutY="93.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #6994db;" text="%mydoctor" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="send" layoutX="107.0" layoutY="142.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #6994db;" text="%send" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="eng_img" fitHeight="40.0" fitWidth="40.0" layoutX="141.0" layoutY="399.0" onMouseClicked="#eng_c">
+
+      </ImageView>
+      <ImageView fx:id="rus_img" fitHeight="40.0" fitWidth="40.0" layoutX="209.0" layoutY="399.0" onMouseClicked="#rus_c">
+
+      </ImageView>
+      <ImageView fx:id="ukr_img" fitHeight="40.0" fitWidth="40.0" layoutX="277.0" layoutY="399.0" onMouseClicked="#ukr_c">
+
+      </ImageView>
+      <Button fx:id="ukr_btn" layoutX="277.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Button>
+      <Button fx:id="rus_btn" layoutX="210.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Button>
+      <Button fx:id="eng_btn" layoutX="141.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

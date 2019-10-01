@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.MyDoctor">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="460.0" style="-fx-background-color: #6994db;">
+         <children>
+            <Text fill="WHITE" layoutX="157.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Health Helper">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnBackDoctor" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5583D3;" text="%back" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="add" layoutX="153.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #6994db;" text="%add" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="lastname" layoutX="236.0" layoutY="106.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="email" layoutX="236.0" layoutY="159.0" prefHeight="25.0" prefWidth="161.0" />
+      <Text layoutX="81.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%doclastname" wrappingWidth="146.30859375" />
+      <Text layoutX="95.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:" wrappingWidth="104.0" />
+      <Button fx:id="find" layoutX="141.0" layoutY="367.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: #6994db;" text="%find" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="doctors" layoutX="118.0" layoutY="307.0" prefHeight="25.0" prefWidth="249.0" promptText="%seedocs" />
+   </children>
+</AnchorPane>

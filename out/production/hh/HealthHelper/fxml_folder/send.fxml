@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.Send">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="460.0" style="-fx-background-color: #6994db;">
+         <children>
+            <Text fill="WHITE" layoutX="157.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Health Helper">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnBackSend" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5583D3;" text="%back" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnSend" layoutX="124.0" layoutY="401.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="213.0" style="-fx-background-color: #6994db;" text="%send" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="temperature" layoutX="202.0" layoutY="114.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="ft" layoutX="202.0" layoutY="241.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="pulse" layoutX="202.0" layoutY="157.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="gk" layoutX="203.0" layoutY="279.0" prefHeight="25.0" prefWidth="161.0" />
+      <Text layoutX="98.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%tp" wrappingWidth="78.0" />
+      <Text layoutX="98.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%bf" wrappingWidth="109.0" />
+      <Text layoutX="98.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%pulse" wrappingWidth="78.0" />
+      <Text layoutX="98.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%gk" wrappingWidth="94.0" />
+      <TextField fx:id="pressure" layoutX="202.0" layoutY="202.0" prefHeight="25.0" prefWidth="161.0" />
+      <Text layoutX="98.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%press" wrappingWidth="78.0" />
+      <ComboBox fx:id="doctors" layoutX="106.0" layoutY="362.0" prefHeight="25.0" prefWidth="249.0" promptText="%selectEmail" />
+      <Text layoutX="98.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="78.0" />
+      <TextField fx:id="id" layoutX="203.0" layoutY="79.0" prefHeight="25.0" prefWidth="161.0" />
+      <Text fx:id="empty" layoutX="186.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%empty" visible="false" wrappingWidth="161.0" />
+   </children>
+</AnchorPane>

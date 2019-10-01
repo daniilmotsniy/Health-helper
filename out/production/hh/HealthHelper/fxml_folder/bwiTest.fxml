@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.BwiTestController">
+    <children>
+        <AnchorPane prefHeight="70.0" prefWidth="480.0" style="-fx-background-color: #6994db;">
+            <children>
+                <Text fill="WHITE" layoutX="157.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%bwi_main">
+                    <font>
+                        <Font name="Segoe UI" size="24.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnBackBwiTest" layoutX="40.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5583D3;" text="%back" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <TextField fx:id="heightFieldBwi" layoutX="264.0" layoutY="128.0" prefHeight="32.0" prefWidth="166.0" promptText="%growth" />
+        <TextField fx:id="weightFieldBwi" layoutX="264.0" layoutY="202.0" prefHeight="32.0" prefWidth="166.0" promptText="%weight" />
+        <Button fx:id="resultButtonBwi" layoutX="294.0" layoutY="267.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #6994db;" text="%calc" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Text layoutX="104.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%result">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="resultBwiText" layoutX="59.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="135.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="perfectBwiText" layoutX="60.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%pw" wrappingWidth="135.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="perfectBwiText" layoutX="59.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="135.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Label layoutX="14.0" layoutY="95.0" prefHeight="222.0" prefWidth="226.0" text="%bwi_text" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="class_estimate_bwi_a" layoutX="264.0" layoutY="341.0" prefHeight="25.0" prefWidth="135.0" text="%bwi_estimate_a" visible="false" wrapText="true">
+            <font>
+                <Font name="Roboto Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="class_estimate_bwi_b" layoutX="264.0" layoutY="368.0" prefHeight="19.0" prefWidth="135.0" text="%bwi_estimate_b" visible="false" wrapText="true">
+            <font>
+                <Font name="Roboto Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="class_estimate_bwi_c" layoutX="265.0" layoutY="388.0" prefHeight="25.0" prefWidth="135.0" text="%bwi_estimate_c" visible="false" wrapText="true">
+            <font>
+                <Font name="Roboto Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="class_estimate_bwi_d" layoutX="265.0" layoutY="412.0" prefHeight="24.0" prefWidth="135.0" text="%bwi_estimate_d" visible="false" wrapText="true">
+            <font>
+                <Font name="Roboto Regular" size="14.0" />
+            </font>
+        </Label>
+
+    </children>
+</AnchorPane>
