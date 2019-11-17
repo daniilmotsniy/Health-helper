@@ -19,26 +19,26 @@ public class Main extends Application {
 
     //Метод для загрузки новой страницы
     public void PageLoader(String fxml_url, Button btn_name){
-        //Скрываем текущею страницу
+        //Сховуєму таблицю
         btn_name.getScene().getWindow().hide();
-        //Заружаем новую
+        //Завантажуємо нову
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(fxml_url));
         loader.setResources(bundleStart);
-        //Проверка исключений
+        //Перевірка виключень
         try {
             loader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //Устанавливаем параметры сцены
+        //Встановлюємо параметри сцени
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.setTitle("Health Helper");
         stage.show();
-        //Добавляем иконку
+        //Додаємо зображення
         Image icon = new Image(getClass().getResourceAsStream("icon/cross.png"));
         stage.getIcons().add(icon);
     }
@@ -58,8 +58,6 @@ public class Main extends Application {
 
     }
     public static void main(String[] args)throws ClassNotFoundException, SQLException, MessagingException, IOException {
-
-
         Conn.Conn(); //Підключення до БД
         Conn.CreateDB(); // Створення локальної БД
         Conn.CreateDBT(); // Створення таблиці з результатами

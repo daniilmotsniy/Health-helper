@@ -16,7 +16,7 @@ public class Conn {
     public static Statement statmt;
     public static ResultSet resSet;
 
-    // --------ПОДКЛЮЧЕНИЕ К БАЗЕ ДАННЫХ--------
+    // Підключаємось до БД
     public static void Conn() throws ClassNotFoundException, SQLException
     {
         conn = null;
@@ -25,26 +25,26 @@ public class Conn {
 
     }
 
-    // --------Создание таблицы--------
+    // Створюємо таблицю
     public static void CreateDB() throws ClassNotFoundException, SQLException
     {
         statmt = conn.createStatement();
         statmt.execute("CREATE TABLE if not exists 'doctors' ('name' text, 'email' text);");
     }
 
-    // --------Заполнение таблицы--------
+    // Заповнюємо таблицю
     public static void WriteDB(String lastname, String email) throws SQLException
     {
         statmt.execute("INSERT INTO 'doctors' ('name', 'email') VALUES ('" + lastname + "', '" + email + "'); ");
     }
 
-    // --------Удаление БД--------
+    // Видалити таблицю
     public static void DeleteTable(String dbname) throws SQLException
     {
         statmt.execute("DROP TABLE '" + dbname + "';");
     }
 
-    // -------- Вывод таблицы--------
+    // Виводимо таблицю
     public static void ReadDB(ComboBox doctors) throws ClassNotFoundException, SQLException
     {
         resSet = statmt.executeQuery("SELECT * FROM doctors");
@@ -57,7 +57,7 @@ public class Conn {
         }
 
     }
-    // -------- Вывод таблицы--------
+    // Виводимо таблиці
 
     public static void GetEmail(ComboBox cb) throws ClassNotFoundException, SQLException
     {
@@ -74,7 +74,7 @@ public class Conn {
     }
 
 
-    // --------Закрытие--------
+    // Закриття
     public static void CloseDB() throws ClassNotFoundException, SQLException
     {
         conn.close();
@@ -83,7 +83,7 @@ public class Conn {
 
     }
 
-    // --------Создание таблицы--------
+    // Створюємо таблицю (текст)
     public static void CreateDBT() throws ClassNotFoundException, SQLException
     {
         statmt = conn.createStatement();
@@ -91,7 +91,7 @@ public class Conn {
 
     }
 
-    // --------Заполнение таблицы--------
+    // Заповнюємо таблицю (текст)
     public static void WriteDBT(String temp, String puls, String pres ) throws SQLException
     {
         statmt.execute("INSERT INTO 'values' ('temp', 'pulse', 'press', 'date') VALUES ('"+temp+"', '"+puls+"', '"+pres+"', '" + today.toString() + "'); ");

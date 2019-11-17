@@ -1,5 +1,6 @@
 package HealthHelper;
 
+import HealthHelper.email.Email;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,16 +15,12 @@ import java.util.Date;
 public class RuthTestController extends MainController {
     @FXML
     private TextArea labelInput0;
-
     @FXML
     private TextArea labelInput2;
-
     @FXML
     private TextArea labelInput3;
-
     @FXML
     private TextArea labelInput1;
-
     @FXML
     Text labelEstimate_no;
     @FXML
@@ -34,29 +31,19 @@ public class RuthTestController extends MainController {
     Text labelEstimate_good;
     @FXML
     Text labelEstimate_perfect;
-
     @FXML
     private Button btnSend_rt;
-
     @FXML
     ComboBox doctors_rt;
-
     Date td  = new Date();
 
     @FXML
     private Text labelResult;
-
-
     @FXML
     private Text empty_rt;
-
     @FXML
     private TextField id_rt;
-
-
-
     @FXML Button btnCheck;
-
     @FXML Button btnBackRuthTest;
 
     public void setVisble(Text visible) {
@@ -81,7 +68,7 @@ public class RuthTestController extends MainController {
             e.printStackTrace();
         }
 
-        //Обработка событий при нажатии на кнопку подсчета
+        //Обробка
         btnCheck.setOnAction(event -> {
             //Установка показаний
             int age = Integer.valueOf(labelInput0.getText());

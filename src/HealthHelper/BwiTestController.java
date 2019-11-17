@@ -38,14 +38,13 @@ public class BwiTestController extends MainController {
 
     @FXML
     void initialize() {
-        // Подсчет результата ИМТ
+        // Рахуємо ІМТ
         resultButtonBwi.setOnAction(event -> {
 
             Double heigth = Double.parseDouble(heightFieldBwi.getText());
             Double weight = Double.parseDouble(weightFieldBwi.getText());
             Double resultBwi = weight / (heigth * heigth);
             resultBwiText.setText(resultBwi.toString());
-
 
             if (resultBwi <= 16) {
                 class_estimate_bwi_a.setVisible(true);
@@ -75,7 +74,7 @@ public class BwiTestController extends MainController {
             perfectBwiText.setText(perfectBwi.toString());
         });
 
-        //Обработка событий по возвращению в главное меню
+        //Обрабка подій для повернення в головне меню
         btnBackBwiTest.setOnAction(event -> {
             PageLoader("fxml_folder/main.fxml", btnBackBwiTest);
         });

@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.Send">
+<AnchorPane prefHeight="480.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthHelper.SendController">
    <children>
       <AnchorPane prefHeight="70.0" prefWidth="460.0" style="-fx-background-color: #6994db;">
          <children>
