@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.sql.SQLException;
 
-public class MyDoctorController extends MenuController {
+public class MyDoctorController {
 
     @FXML
     private Button btnBackDoctor;
@@ -61,31 +61,38 @@ public class MyDoctorController extends MenuController {
 
 
         find.setOnAction(event -> {
-            String lastname = (String) doctors.getValue();
-            System.out.println(lastname);
-            if(lastname!=null) {
-                try {
-                    openWebpage(new URI ("https://helsi.me/find/?area&name=" +  URLEncoder.encode(lastname) + "&searchMode=name"));
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
+            if(doctors.getValue().equals("")){
+                String lastname = (String) doctors.getValue();
+                System.out.println(lastname);
+                if(lastname!=null) {
+                    try {
+                        openWebpage(new URI ("https://helsi.me/find/?area&name=" +  URLEncoder.encode(lastname) + "&searchMode=name"));
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    }
                 }
+            } else {
+                System.out.println("Error");
             }
         });
 
 
        add.setOnAction(event -> {
-           try {
-               Conn.conn();
-               Conn.writeDocTable(lastname.getText(), email.getText());
-               Conn.readDocIntoComboBox(doctors);
-               Conn.closeDB();
-           } catch (ClassNotFoundException | SQLException e) {
-               e.printStackTrace();
+           if(!(lastname.getText().equals("") || email.getText().equals(""))) {
+               try {
+                   Conn.conn();
+                   Conn.writeDocTable(lastname.getText(), email.getText());
+                   Conn.readDocIntoComboBox(doctors);
+                   Conn.closeDB();
+               } catch (ClassNotFoundException | SQLException e) {
+                   e.printStackTrace();
+               }
+
+               lastname.setText("");
+               email.setText("");
+           } else {
+               System.out.println("Error!");
            }
-
-           lastname.setText("");
-           email.setText("");
-
         });
 
     }

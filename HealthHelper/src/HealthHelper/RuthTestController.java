@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Date;
 
-public class RuthTestController extends MenuController {
+public class RuthTestController {
     @FXML
     private TextArea labelInput0;
     @FXML

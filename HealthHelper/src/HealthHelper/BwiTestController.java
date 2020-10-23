@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class BwiTestController extends MenuController {
+public class BwiTestController {
     @FXML
     private TextField heightFieldBwi;
     @FXML

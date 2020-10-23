@@ -7,10 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Conn {
-    private static Date today = new Date();
     private static Connection conn;
     private static Statement stamp;
     private static ResultSet resSet;
@@ -85,9 +83,9 @@ public class Conn {
     }
 
     // --------Заполнение таблицы data--------
-    static void writeDataTable(int id, float temp, float gluc, int puls, int rate, String pres) throws SQLException
+    static void writeDataTable(int id, float temp, float gluc, int puls, int rate, String pres, String time) throws SQLException
     {
-        stamp.execute("INSERT INTO 'data' ('id', 'temp', 'glucose', 'pulse', 'rate','press', 'date') VALUES ('"+id+"', '"+temp+"', '"+gluc+"', '"+puls+"', '"+rate+"', '"+pres+"', '" + today.toString() + "'); ");
+        stamp.execute("INSERT INTO 'data' ('id', 'temp', 'glucose', 'pulse', 'rate','press', 'date') VALUES ('"+id+"', '"+temp+"', '"+gluc+"', '"+puls+"', '"+rate+"', '"+pres+"', '" + time + "'); ");
     }
 
     // -------- Вивід таблиці data--------
@@ -112,7 +110,7 @@ public class Conn {
             System.out.println("Rate = " + rate);
             System.out.println("Press = " + press);
             System.out.println("Date = " + date);
-            System.out.println(" ");
+            System.out.println();
         }
 
     }

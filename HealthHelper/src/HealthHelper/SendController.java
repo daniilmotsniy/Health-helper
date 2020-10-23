@@ -1,16 +1,15 @@
 package HealthHelper;
 
+import java.util.Calendar;
 import java.util.Date;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javax.mail.MessagingException;
-import java.io.IOException;
 import java.sql.SQLException;
 
-public class SendController extends MenuController {
+public class SendController {
 
     private Date td  = new Date();
     @FXML
@@ -55,7 +54,7 @@ public class SendController extends MenuController {
             } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();
             }
-            String email = doctors.getSelectionModel().getSelectedItem().toString();
+            String doc_email = doctors.getSelectionModel().getSelectedItem().toString();
 
             String res = "Results " + td + " from Health Helper : temperature " + temperature.getText() + ", " +  "pulse " + pulse.getText() + ", " + "pressure " + pressure.getText() +  ", breathing rate " + ft.getText() + ", " +  "blood glucose " + gk.getText() +  ".";
 
@@ -64,8 +63,10 @@ public class SendController extends MenuController {
 
                 try {
                     Conn.conn();
-                    Conn.writeDataTable(Integer.parseInt(id.getText()), Float.parseFloat(temperature.getText()), Float.parseFloat(gk.getText()), Integer.parseInt(pulse.getText()), Integer.parseInt(ft.getText()), pressure.getText());
-                 //   Email.sendMail(email, res, id.getText());
+
+                    //TODO FIX TIME (in one session) AND EMAIL
+                    Conn.writeDataTable(Integer.parseInt(id.getText()), Float.parseFloat(temperature.getText()), Float.parseFloat(gk.getText()), Integer.parseInt(pulse.getText()), Integer.parseInt(ft.getText()), pressure.getText(), Calendar.getInstance().getTime().toString());
+                 //   Email.sendMail(doc_email, res, id.getText());
                     Conn.closeDB();
 
                 } catch (ClassNotFoundException | SQLException e) {
@@ -78,7 +79,6 @@ public class SendController extends MenuController {
                      temperature.setText("");
                      pulse.setText("");
                      pressure.setText("");
-
 
             }  else {
                 empty.setVisible(true);

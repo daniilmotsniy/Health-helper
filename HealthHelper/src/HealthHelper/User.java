@@ -1,9 +1,11 @@
 package HealthHelper;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
 
-    public User(int id, float temperature, float glucose, int pulse, int rate, String pressure, String date) {
+    User(int id, float temperature, float glucose, int pulse, int rate, String pressure, String date) {
         this.id = id;
         this.temperature = temperature;
         this.glucose = glucose;
