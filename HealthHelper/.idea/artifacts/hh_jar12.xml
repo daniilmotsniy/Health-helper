@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="hh:jar12">
+    <output-path>$PROJECT_DIR$/out/artifacts/hh_jar12</output-path>
+    <root id="archive" name="hh.jar">
+      <element id="module-output" name="hh" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/logging-mailhandler-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.mail.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/smtp-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jsoup-1.11.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/dsn-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/gimap-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mailapi-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/pop3-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/sqlite-jdbc-3.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/imap-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mail-1.5.0-b01.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.mail-api-1.6.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
