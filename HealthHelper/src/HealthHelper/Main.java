@@ -57,7 +57,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(icon);
     }
 
-    public static void main(String[] args)throws ClassNotFoundException, SQLException, MessagingException, IOException {
+    public static void main(String[] args)throws ClassNotFoundException, SQLException {
         Conn.conn(); //Підключення до БД
         Conn.createDocTable(); // Створення локальної БД
         Conn.createDataTable(); // Створення таблиці з результатами
