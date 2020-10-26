@@ -66,7 +66,6 @@ public class SendController {
 
                 try {
                     Conn.conn();
-
                     //TODO FIX TIME (in one session) AND EMAIL
                     Conn.writeDataTable(Integer.parseInt(id.getText()), Float.parseFloat(temperature.getText()), Float.parseFloat(gk.getText()), Integer.parseInt(pulse.getText()), Integer.parseInt(ft.getText()), pressure.getText(), Calendar.getInstance().getTime().toString());
                     Email.sendMail(doc_email, res, id.getText());

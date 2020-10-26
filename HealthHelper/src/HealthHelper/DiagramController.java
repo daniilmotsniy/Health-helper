@@ -30,16 +30,17 @@ public class DiagramController {
         XYChart.Series<String, Integer> pulse = new XYChart.Series<>();
         pulse.setName("Pulse");
         XYChart.Series<String, Integer> temperature = new XYChart.Series<>();
-        temperature.setName("Temp");
+        temperature.setName("Temperature");
         XYChart.Series<String, Integer> glucose = new XYChart.Series<>();
         glucose.setName("Glucose");
 
         for (User el : data) {
             String date = el.getDate().substring(4, 16);
-            temperature.getData().add(new XYChart.Data<>(date,(int) el.getTemperature()));
-            glucose.getData().add(new XYChart.Data<>(date, (int) el.getGlucose()));
-            pulse.getData().add(new XYChart.Data<>(date, el.getPulse()));
-            rate.getData().add(new XYChart.Data<>(date, el.getRate()));
+            Data data = el.getData();
+            temperature.getData().add(new XYChart.Data<>(date,(int) data.getTemperature()));
+            glucose.getData().add(new XYChart.Data<>(date, (int) data.getGlucose()));
+            pulse.getData().add(new XYChart.Data<>(date, data.getPulse()));
+            rate.getData().add(new XYChart.Data<>(date, data.getRate()));
         }
 
         line_chart.getData().addAll(pulse, rate, temperature, glucose);

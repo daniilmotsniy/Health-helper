@@ -89,7 +89,7 @@ public class Conn {
     }
 
     // -------- Вивід таблиці data--------
-   static void readData(ArrayList<User> data) throws ClassNotFoundException, SQLException {
+   static void readData(ArrayList<User> users) throws ClassNotFoundException, SQLException {
         resSet = stamp.executeQuery("SELECT * FROM 'data' ");
 
         while(resSet.next()) {
@@ -101,7 +101,9 @@ public class Conn {
             String press = resSet.getString("press");
             String date = resSet.getString("date");
 
-            data.add(new User(id, temp, glucose, pulse,rate,press,date));
+            Data data = new Data(temp, glucose, pulse, rate, press);
+
+            users.add(new User(id, data, date));
 
             System.out.println("ID = " + id);
             System.out.println("Temp = " + temp);
