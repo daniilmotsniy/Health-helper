@@ -19,7 +19,7 @@ public class DiagramController {
     void initialize() {
         try {
             Conn.conn();
-            Conn.readData(data);
+            Conn.getUsers(data);
             Conn.closeDB();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
