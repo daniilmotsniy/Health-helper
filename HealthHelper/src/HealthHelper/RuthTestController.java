@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Date;
 
-public class RuthTestController {
+public class RuthTestController implements Calculable {
     @FXML
     private TextArea labelInput0;
     @FXML
@@ -80,7 +80,8 @@ public class RuthTestController {
                 double input3 = Double.parseDouble(labelInput3.getText());
 
                 //Формула Руфье
-                double result = (4 * (input1 + input2 + input3) - 200) / 10;
+              //  double result = (4 * (input1 + input2 + input3) - 200) / 10;
+                double result = calc(input1, input2, input3);
 
                 //Вывод результата
                 labelResult.setText(Double.toString(result));
@@ -247,4 +248,8 @@ public class RuthTestController {
     }
     //СЕКУНДОМЕР КОНЕЦ ПРИЛОЖЕНИЯ
 
+    @Override
+    public double calc(double input1, double input2, double input3) {
+        return (4 * (input1 + input2 + input3) - 200) / 10;
+    }
 }

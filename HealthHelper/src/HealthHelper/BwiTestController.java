@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class BwiTestController {
+public class BwiTestController implements Calculable {
     @FXML
     private TextField heightFieldBwi;
     @FXML
@@ -64,7 +64,7 @@ public class BwiTestController {
                     System.out.println("Error");
                 }
 
-                double perfectBwi = (height * height) * 21;
+                double perfectBwi = calc(height, weight, 21);
                 perfectBwiText.setText(Double.toString(perfectBwi));
             }
         });
@@ -73,5 +73,10 @@ public class BwiTestController {
         btnBackBwiTest.setOnAction(event -> {
             Main.PageLoader("fxml_folder/main.fxml", btnBackBwiTest);
         });
+    }
+
+    @Override
+    public double calc(double input1, double input2, double bwi_constant) {
+        return (input1 * input2) * bwi_constant;
     }
 }

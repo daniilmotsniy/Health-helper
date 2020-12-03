@@ -3,7 +3,7 @@ package HealthHelper;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    User(int id, Data data, String date) {
+    public User(int id, Data data, String date) {
         this.id = id;
         this.data = data;
         this.date = date;
